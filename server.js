@@ -5,16 +5,18 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+var port = process.env.PORT || 3000
+
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 apiRoutes(app);
 htmlRoutes(app);
 
-//app.listen(3000,function(){
-   // console.log("FriendFinder listening on port 3000");
+app.listen(port, function(){
+   console.log("FriendFinder listening on port 3000");
 
-//});
+});
 
 
 
