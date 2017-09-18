@@ -1,11 +1,9 @@
-const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const friends = require('../data/friends.js');
 
 module.exports = function(app){
     
-    const publicPath = path.join(__dirname + "/../data/");
     const router = express.Router();
     
     console.log('Loading API routes....');
