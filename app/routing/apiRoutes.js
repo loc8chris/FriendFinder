@@ -31,7 +31,7 @@ module.exports = function(app){
         console.log("Handling call to /api/friends...");
 
         let newFriend = getFriend(req.body);
-        friends.add(newFriend);
+        friends.setNewFriend(newFriend);
         res.send(friends.getBestMatch(newFriend));
     });
 
